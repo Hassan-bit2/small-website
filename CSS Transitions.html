@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Transitions</title>
+	<style>
+		.navbar{
+			background-color: lightblue;
+			border: 2px solid black;
+			padding: 35px 35px;
+			/*display: block;*/
+			display: flex;
+			justify-content: space-evenly;
+			list-style: none;
+		}
+		.navbar li{
+			margin: 12px;
+		}
+		.navbar li a{
+			border: 2px solid black;
+			border-radius: 10px;
+			background-color: firebrick;
+			color: lightskyblue;
+			padding: 10px 10px;
+			font-family: sans-serif;
+			font-size: 25px;
+			font-weight: 900;
+			text-decoration: none;
+			transition: color, font-size;
+			transition-duration: 1s;
+		}
+		.button{
+			border-radius: 5px;
+			background-color: orange;
+			color: green;
+			font-family: sans-serif;
+			font-size: 15px;
+			font-weight: 900;
+			padding: 10px 25px;
+			cursor: pointer;
+			transition-property: background-color, color, padding, box-shadow;
+			transition-duration: 1s;
+
+		}
+		.navbar li a:hover{
+			color: yellow;
+			/*font-size: 25px;*/
+		}
+		.button:hover{
+			background-color: gainsboro;
+			color: darkgreen;
+			/*padding: 15px 30px;*/
+			box-shadow: 5px 7px black;
+		}
+		body {
+    		text-align: center;
+    		/*background: url('C:/Users/786/Pictures/Saved Pictures/4aGIdpX.jpg')*/
+    		background-color: lightgreen;
+		}
+		h1{
+			color: red;
+		}
+		form {
+    		display: inline-block;
+		}
+		input[type='Submit']{
+			padding: 7px 7px;
+			background-color: green;
+			color: orange;
+			font-size: 17px;
+			font-weight: 700;
+			cursor: pointer;
+		}
+		input:hover[type='submit']{
+			box-shadow: 5px 5px grey;
+		}
+		.data{
+			font-family: sans-serif;
+		}
+		label[for='fname']{
+			font-size: 20px;
+			font-weight: 700;
+		}
+		label[for='lname']{
+			font-size: 20px;
+			font-weight: 700;
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box{
+			background-color: black;
+			color: red;
+			height: 150px;
+            width: 400px;
+            margin-top: 20px;
+            border: 2px solid red;
+            transition: all 2s ease-in-out;
+		}
+		/*.box:hover{
+			transform: rotate(360deg);	
+		}*/
+		.box h1:hover{
+			transform: skew(-45deg);
+		}
+		.box p:hover{
+			transform: skew(-45deg);
+		}
+		.btn{
+			margin: 10px;
+			padding: 10px 25px;
+			background-color: red;
+			color: black;
+			font-size: 20px;
+			border-radius: 5px;
+			transition: all;
+			transition-duration: 1s;
+
+		}
+		.btn:hover{
+			background-color: blue;
+			color: yellow;
+			/*text-shadow: 2px 4px gray;*/
+		}
+		.link{
+			margin: 10px;
+			padding: 10px 15px;
+			background-color: black;
+			border: 2px solid red;
+			width: 100px;
+			margin: auto;
+			/*display: flex;
+			justify-content: center;
+			align-content: center;*/
+		}
+		.link a{
+			text-decoration: none;
+			color: red;
+			/*text-align: center;*/
+		}
+		.click{
+			margin-top: 10px;
+			padding: 10px 10px;
+			background-color: lightblue;
+			color: green;
+			font-size: 15px;
+			font-weight: 600;
+			transition: all;
+			transition-duration: 1s;
+		}
+		.click:hover{
+			background-color: firebrick;
+			color: orange;
+			box-shadow: 5px 7px gray;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<nav>
+			<ul class="navbar">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#" onclick="alert('This is our service!')">Services</a></li>
+				<li><a href="#" onclick="alert('This is our contact')">Contact us</a></li>
+				<button class="button" type="button" onclick="alert('ENROLL KAR SAALAY!')">Enroll now</button>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="data">
+		<h1>Enter your data below to create your acount</h1>
+	</div>
+
+	<div>
+		<form class="form">
+		  <label for="fname">First name:</label><br>
+		  <input type="text" id="fname" name="fname"><br><br>
+		  <label for="lname">Email:</label><br>
+		  <input type="email" id="lname" name="mail"><br><br>
+		  <input type="submit" value="Submit">
+		  <!-- <button type="button" onclick="alert('Submission complete')">Submit</button> -->
+		</form> 
+	</div>
+
+	<div>
+		<button class="btn" type="button" onclick="alert('Get the F#* out!')">More about us</button>
+	</div>
+
+	<div class="link">
+		<button class="link"><a href="http://google.com" target="_blank">Google.com</a></button>
+	</div>
+
+	<div>
+		<button class="click" onclick="alert('You are a FOOL!')">Click here</button>
+	</div>
+
+</body>
+</html>
